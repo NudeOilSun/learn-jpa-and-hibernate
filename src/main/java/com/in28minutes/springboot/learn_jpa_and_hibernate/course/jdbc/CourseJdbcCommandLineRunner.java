@@ -17,5 +17,8 @@ public class CourseJdbcCommandLineRunner implements CommandLineRunner {
         repository.insert(new Course(2, "In28Minutes", "Learn Azure Now!"));
         repository.insert(new Course(3, "In28Minutes", "Learn DevOps Now!"));
         repository.deleteById(1);
+
+        System.out.println(repository.selectById(2));
+        System.out.println(repository.selectById(3));
     }
 }
