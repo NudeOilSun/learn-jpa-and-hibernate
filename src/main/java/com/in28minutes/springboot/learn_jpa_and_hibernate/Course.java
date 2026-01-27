@@ -1,8 +1,19 @@
 package com.in28minutes.springboot.learn_jpa_and_hibernate;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+
+@Entity
 public class Course {
+
+    @Id
     private long id;
+
+    //@Column(name="author") -- if they dont have the same name
     private String author;
+
+    //@Column(name="name")
     private String name;
 
     public Course(){
